@@ -57,15 +57,15 @@ class Clock extends Component {
     render() {
         const { day, hour, minutes, seconds, timeofDay, darkMode } = this.state;
         return (
-            <div className="clock" style={{ position: 'relative' }}>
+            <div
+                className={darkMode ? 'dark-mode' : 'light-mode'}
+                style={clockContainer}
+            >
                 <Button
                     handleDarkMode={this.handleDarkMode}
                     darkMode={darkMode}
                 />
-                <div
-                    style={clock}
-                    className={darkMode ? 'dark-mode' : 'light-mode'}
-                >
+                <div style={clock}>
                     <ClockPart part={day} label="Day" />
                     <span style={span}>:</span>
                     <ClockPart part={hour} label="Hour" />
@@ -80,15 +80,21 @@ class Clock extends Component {
     }
 }
 
-const clock = {
+const clockContainer = {
     display: 'flex',
-    justifyContent: 'space-evenly',
-    width: '800px',
+    justifyContent: 'center',
     alignItems: 'center',
-    padding: '50px',
+    position: 'relative',
+    width: '800px',
     height: '150px',
     borderRadius: '4px',
     boxShadow: '0px 0px 10px 5px rgba(0, 0, 0, 0.15)',
+};
+
+const clock = {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
 };
 
 const span = {
