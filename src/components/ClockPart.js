@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 class ClockPart extends Component {
     render() {
-        const { part, subtitle } = this.props;
+        const { part, label } = this.props;
         return (
             <div style={style}>
                 <h1 style={clockPartH1}>{part}</h1>
-                <p style={clockPartP}>{subtitle}</p>
+                <p style={clockPartP}>{label}</p>
             </div>
         );
     }

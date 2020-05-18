@@ -35,6 +35,7 @@ class Clock extends Component {
             }
             if (hour === 0) {
                 hour = 12;
+                this.setState({ timeofDay: 'AM' });
             }
 
             if (minutes < 10) {
@@ -65,13 +66,13 @@ class Clock extends Component {
                     style={clock}
                     className={darkMode ? 'dark-mode' : 'light-mode'}
                 >
-                    <ClockPart part={day} subtitle="Day" />
+                    <ClockPart part={day} label="Day" />
                     <span style={span}>:</span>
-                    <ClockPart part={hour} subtitle="Hour" />
+                    <ClockPart part={hour} label="Hour" />
                     <span style={span}>:</span>
-                    <ClockPart part={minutes} subtitle="Minutes" />
+                    <ClockPart part={minutes} label="Minutes" />
                     <span style={span}>:</span>
-                    <ClockPart part={seconds} subtitle="Seconds" />
+                    <ClockPart part={seconds} label="Seconds" />
                     <h2 style={h2}>{timeofDay}</h2>
                 </div>
             </div>
