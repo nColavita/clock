@@ -16,26 +16,3 @@ body {
     height: 100vh;
     width: 100%;
 }
-
-/* Toggle Light / Dark Mode */
-.light-mode {
-    color: #1b1b1b;
-    background-color: #ffffff;
-}
-.dark-mode {
-    color: #ffffff;
-    background-color: #1b1b1b;
-}
-
-.button-border-dark {
-    border: solid #ffffff 2px;
-}
-.button-border-light {
-    border: solid #1b1b1b 2px;
-}
-.button-dark {
-    background-color: #ffffff;
-}
-.button-light {
-    background-color: #1b1b1b;
-}

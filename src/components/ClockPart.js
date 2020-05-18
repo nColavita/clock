@@ -5,8 +5,8 @@ class ClockPart extends Component {
         const { part, subtitle } = this.props;
         return (
             <div style={style}>
-                <h1 style={style.h1}>{part}</h1>
-                <p style={style.p}>{subtitle}</p>
+                <h1 style={clockPartH1}>{part}</h1>
+                <p style={clockPartP}>{subtitle}</p>
             </div>
         );
     }
@@ -15,15 +15,16 @@ class ClockPart extends Component {
 const style = {
     textAlign: 'center',
     width: '110px',
-    h1: {
-        fontSize: '3.5em',
-        fontWeight: '200',
-    },
-    p: {
-        color: '#666666',
-        fontSize: '0.5em',
-        fontWeight: '200',
-    },
+};
+
+const clockPartH1 = {
+    fontSize: '3.5em',
+    fontWeight: '200',
+};
+
+const clockPartP = {
+    fontSize: '0.6em',
+    fontWeight: '200',
 };
 
 export default ClockPart;

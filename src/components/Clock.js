@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import ClockPart from './ClockPart';
 import Button from './Button';
 
+import './Clock.css';
+
 class Clock extends Component {
     state = {
         day: '--',
